@@ -1,1 +1,7 @@
+1. leastSquares[i] = min(every element stored in leastSquares at (i - squares less than i)) + 1 //ex n = 12, check n-1, n-4, and n-9
+
+2. For this problem an array will be used to store the best least amount of squares that can fit at a given N. When looking at simpler cases such as the numbers 1-3, there is only one option (the square 1) given available to those values. Once we have a value greater than 4
+(the next square) and less than 16 we can now compare the options at i-4 and i-1. This check is based on the idea that we are trying to find the least amount of options between taking the square 4 or the square 1 and obtain the number of options as if it's a new number of N minus that square. For example given the number 12, we can take the square 4 as our first option and treat the problem as now finding the best solution for the value 8, or we can take the square 1 and treat the problem as find the best solution for the value 11. We can then add 1 to the minimum value of the different options for squares to take at the N index of our created array to later be used by greater values.
+
+3. It seemed that the best approach in solving this problem was listing numbers and the least amount of squares needed to sum to each number. The pattern recognition came when noticing the values for the squares and the answer to the value of 12. As mentioned before, it makes sense that all squares require only 1 value since N minus itself is 0, and the remaining value 0 requires no number of squares to sum up to it. 
 
