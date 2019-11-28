@@ -1,4 +1,4 @@
-1. if (currChain in lengthChainsStored):\n
+1. if (currChain in lengthChainsStored):
       return lengthChainsStored[currChain]
    if there is no available chain to extend: return 1 and store the mapped list and value
    lengthChainsStored[currChain] = chainLength(validChainFound) + 1 // lengthChainsStored[currChain] will be replaced with
